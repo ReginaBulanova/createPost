@@ -1,14 +1,16 @@
 package ru.createPost
 
-import ru.createPost.Post.WallService
+import ru.createPost.Post
+import ru.createPost.Post.WallService.add
+import ru.createPost.Post.WallService.update
 
 fun main() {
     val original = Post()
     val superPost = Post()
-    val netology = Post(text = "Как прекрасна Нетология!")
+    val netlogo = Post(text = "Как прекрасна Нетология!")
 
-    WallService.add(superPost)
-    print(WallService.update(superPost))
-    WallService.add(netology)
-    WallService.add(original)
+    add(superPost)
+    add(netlogo)
+    add(original)
+    update(original)
 }
